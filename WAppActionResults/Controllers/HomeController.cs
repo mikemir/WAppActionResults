@@ -14,7 +14,9 @@ namespace WAppActionResults.Controllers
         public string Nombre { get; set; }
     }
 
+    //https://msdn.microsoft.com/en-us/library/system.web.mvc.actionresult(v=vs.118).aspx
     //https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME
+
     public class HomeController : Controller
     {
         //EJEMPLO 0:
@@ -95,7 +97,7 @@ namespace WAppActionResults.Controllers
 
         public ActionResult Index()
         {
-            return new ImageWatemarkResult("", "");
+            return View();
         }
 
         public ActionResult About()

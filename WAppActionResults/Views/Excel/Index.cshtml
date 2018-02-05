@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ExcelResult</h2>
+
+@Html.ActionLink("Generar excel", "GenerateExcel", "Excel", new { id = "gen-excel", @class = "btn btn-success" })
+
+@section scripts{
+    <script>
+
+        function showLoading(btn) {
+            $(btn).attr('disabled', true);
+            $(btn).text('Loading...');
+        }
+
+        function hideLoading(btn) {
+            $(btn).removeAttr('disabled');
+            $(btn).text('Generar excel');
+        }
+
+        $(function () {
+            $('#gen-excel').on('click', function (e) {
+                e.preventDefault();
+
+                console.log('Hello World!');
+            });
+        });
+    </script>    
+}
