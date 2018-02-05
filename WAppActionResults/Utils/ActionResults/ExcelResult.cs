@@ -10,6 +10,9 @@ namespace WAppActionResults.Utils.ActionResults
 {
     public class ExcelResult : ActionResult
     {
+        public IEnumerable<object> _data { get; set; }
+        public string _name { get; set; }
+
         public ExcelResult(string name, IEnumerable<object> data)
         {
             _name = name;
@@ -31,10 +34,6 @@ namespace WAppActionResults.Utils.ActionResults
             }
 
         }
-
-        public IEnumerable<object> _data { get; set; }
-        public string _name { get; set; }
-
 
         private MemoryStream CreateExcelFile(string name, IEnumerable<object> data)
         {
